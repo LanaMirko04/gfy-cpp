@@ -9,11 +9,38 @@
 
 using namespace std;
 
+/**
+ * @brief A class to read tokens from a source file
+ * 
+ * The lexer reads tokens from a source file and returns them one by one.
+ * It also keeps track of the current line and column in the source file.
+ */
 class Lexer {
     public:
+        /**
+         * @brief Construct a new Lexer object
+         *
+         * @param filename The name of the file to read from
+         */
         Lexer(const char* filename);
+
+        /**
+         * @brief Construct a new Lexer object
+         *
+         * @param filename The name of the file to read from
+         */
         Lexer(const string& filename);
+
+        /**
+         * @brief Destroy the Lexer object
+         */
         ~Lexer();
+
+        /**
+         * @brief Get the next token from the source file
+         *
+         * @return The next token
+         */
         Token next_token();
 
     private:

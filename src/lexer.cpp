@@ -46,7 +46,7 @@ Token Lexer::next_token() {
     if (this->line_buff.empty()) {
         getline(this->source, this->line_buff);
         this->line++;
-        this->column = 1;
+        this->column = 0;
     }
 
     char current_char;
@@ -140,7 +140,7 @@ char Lexer::pop_char() {
 
 bool Lexer::is_import_line() {
     // I know, it's deprecated, but it's the only way to convert C++ string to
-    // wstring. I HATE C++ WIDE STRINGS SO MUCH, I WANT TO DIE (o_O) o-- ()___)
+    // wstring. I HATE C++ WIDE STRINGS SO MUCH, I WANT TO DIE
     wstring_convert<codecvt_utf8<wchar_t>, wchar_t> converter;
     wstring wide_line = converter.from_bytes(this->line_buff);
 
