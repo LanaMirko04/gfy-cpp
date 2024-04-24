@@ -20,6 +20,7 @@ using namespace std;
 struct variable_t {
     variant<int, float, string, bool> value;
     Type type;
+    bool strongly_typed = false;
 };
 
 /**
@@ -119,6 +120,8 @@ class Memory {
          * @throws runtime_error If the function already exists
          */
         void add_function(const string& name, const function_t& func);
+
+        // TODO: add a function to get a function from the memory
 
     private:
         map<string, variable_t> variables;

@@ -6,16 +6,21 @@
 
 using namespace std;
 
+/**
+ * @brief Token types
+ */
 enum class Type {
+    Module,
+    Keyword,
     Identifier,
+    Operator,
+    Parenthesis,
+    Bracket,
     Int,
     Float,
     String,
     Boolean,
-    Operator,
-    Delimiter,
-    Keyword,
-    Module,
+    List,
     Eof,
     Unknown
 };
@@ -27,10 +32,15 @@ class Token {
          * 
          * @param type The type of the token
          * @param text The text of the token
+         * @param file The file of the token
          * @param position The position of the token
          */
-        Token(Type type, string text, tuple<int, int> position) :
-            type(type), text(text), position(position) {}
+        Token(
+                Type type,
+                const string& text,
+                const string& file,
+                tuple<int, int> position
+            ) : type(type), text(text), file(file), position(position) {}
 
         /**
          * @brief Type getter
@@ -45,6 +55,13 @@ class Token {
          * @return The text of the token
          */
         string get_text();
+
+        /**
+         * @brief File getter
+         *
+         * @return The file name where the token was found
+         */
+        string get_file();
 
         /**
          * @brief Position getter
@@ -77,6 +94,7 @@ class Token {
     private:
         Type type;
         string text;
+        string file;
         tuple<int, int> position;
 };
 

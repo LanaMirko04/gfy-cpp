@@ -1,0 +1,16 @@
+//set x 4
+print "set x 4 -> int"
+set x 4 -> int
+print x
+
+
+
+print "set x 4.0 -> float"
+set x 4.0 -> float
+print x
+
+set x "4 str" -> string
+print x
+
+print "set x 4 -> string"
+set x 4 -> string // error

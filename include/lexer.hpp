@@ -5,7 +5,25 @@
 
 #include <fstream>
 #include <string>
+#include <array>
 #include <locale>
+
+/**
+ * @brief The keywords in the language
+ */
+const array<string, 11> KEYWORDS = {
+    "set",
+    "print",
+    "add",
+    "sub",
+    "mul",
+    "div",
+    "mod",
+    "equals",
+    "greater",
+    "less",
+    "define",
+};
 
 using namespace std;
 
@@ -46,6 +64,7 @@ class Lexer {
     private:
         static locale loc;
         ifstream source;
+        string filename;
         string line_buff;
         size_t line, column;
 
@@ -69,6 +88,14 @@ class Lexer {
          * @return True if the line is an import line, false otherwise
          */
         bool is_import_line();
+
+        /**
+         * @brief Return the type of a given identifier
+         *
+         * @param identifier The identifier to check
+         * @return The type of the identifier
+         */
+        Type get_type(const string& identifier);
 };
 
 #endif // __LEXER_HPP__

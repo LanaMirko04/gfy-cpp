@@ -4,7 +4,8 @@ using namespace std;
 
 string Token::to_string() const {
     return "{type: " + type2str(this->type) + ", text: " + this->text
-        + ", position: {" + ::to_string(get<0>(this->position)) + ", "
+        + ", position: "+  this->file + " {"
+        + ::to_string(get<0>(this->position)) + ", "
         + ::to_string(get<1>(this->position)) + "}}"; 
 }
 
@@ -14,6 +15,10 @@ Type Token::get_type() {
 
 string Token::get_text() {
     return this->text;
+}
+
+string Token::get_file() {
+    return this->file;
 }
 
 tuple<int, int> Token::get_position() {
@@ -30,8 +35,18 @@ int Token::get_column() {
 
 string type2str(Type type) {
     switch (type) {
+        case Type::Module:
+            return "Module";
+        case Type::Keyword:
+            return "Keyword";
         case Type::Identifier:
             return "Identifier";
+        case Type::Operator:
+            return "Operator";
+        case Type::Parenthesis:
+            return "Parenthesis";
+        case Type::Bracket:
+            return "Bracket";
         case Type::Int:
             return "Int";
         case Type::Float:
@@ -40,18 +55,11 @@ string type2str(Type type) {
             return "String";
         case Type::Boolean:
             return "Boolean";
-        case Type::Operator:
-            return "Operator";
-        case Type::Delimiter:
-            return "Delimiter";
-        case Type::Keyword:
-            return "Keyword";
-        case Type::Module:
-            return "Module";
+        case Type::List:
+            return "List";
         case Type::Eof:
             return "Eof";
         case Type::Unknown:
-        default:
             return "Unknown";
     }
 }

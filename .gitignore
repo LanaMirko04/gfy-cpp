@@ -1,4 +1,4 @@
 **/.DS_Store
-./bib
-./obj
-./doc
+bin
+obj
+doc/html

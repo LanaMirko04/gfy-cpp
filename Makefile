@@ -1,7 +1,7 @@
 # Compiler
 CXX := g++
 # Compiler flags
-CXXFLAGS := -Wall -Wextra -std=c++17 -I./include -I./lib/argspp/src
+CXXFLAGS := -g -Wall -Wextra -std=c++17 -I./include
 
 # Directories
 OBJ_DIR := obj
