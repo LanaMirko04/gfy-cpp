@@ -73,4 +73,5 @@ _TODO_
 
 ## Aknowledgements
 
-This project was inspired by the [GFY language](https://github.com/EtanoloYT/gfy) created by [EtanoloYT](https://github.com/EtanoloYT/) (:warning: _the original project is no longer maintained_ :warning:).
+This project was inspired by the [GFY language](https://github.com/EtanoloYT/gfy) created by [EtanoloYT](https://github.com/EtanoloYT/): :warning: *the original repository is no longer maintained*.
+``
