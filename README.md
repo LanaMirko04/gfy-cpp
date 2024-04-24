@@ -39,39 +39,64 @@ The following is a list of the features that have been implemented in the interp
 - :warning: - Partially implemented
 - :x: - Not implemented
 
-### Keywords
+### I/O
+
 | Keyword | Description | Status |
 | --- | --- | --- |
-| `print` | Prints a string to the console. | :white_check_mark: |
-| `set` | Sets a variable to a value. | :white_check_mark: |
-| `add` | Adds two numbers. | :x: |
-| `sub` | Subtracts two numbers. | :x: |
-| `mul` | Multiplies two numbers. | :x: |
-| `div` | Divides two numbers. | :x: |
-| `mod` | Calculates the remainder of the division of two numbers. | :x: |
-| `equals` | Checks if two values are equal. | :x: |
-| `greater` | Checks if the first value is greater than the second. | :x: |
-| `less` | Checks if the first value is less than the second. | :x: |
-| `define` | Defines a function. | :x: |
+| `input` | Reads a value from the given input stream. | :x: |
+| `output` | Prints a value to the given output stream. | :x: |
 
-### Types
+### Variables
+
+| Keyword | Description | Status |
+| --- | --- | --- |
+| `print` | Prints a string to the console. | :warning: |
+| `set` | Sets a variable to a value. | :warning: |
+
+#### Variable types
 | Type | Description | Status |
 | --- | --- | --- |
 | `int` | Integer number. | :white_check_mark: |
 | `float` | Floating-point number. | :white_check_mark: |
 | `string` | String. | :white_check_mark: |
 | `bool` | Boolean value. | :white_check_mark: |
+| `list` | List of values. | :x: |
+
+### Arithmetic operations
+
+| Keyword | Description | Status |
+| --- | --- | --- |
+| `add` | Adds two numbers. | :x: |
+| `sub` | Subtracts two numbers. | :x: |
+| `mul` | Multiplies two numbers. | :x: |
+| `div` | Divides two numbers. | :x: |
+| `mod` | Calculates the remainder of the division of two numbers. | :x: |
+
+### Logical operations
+
+| Keyword | Description | Status |
+| --- | --- | --- |
+| `equals` | Checks if two values are equal. | :x: |
+| `greater` | Checks if the first value is greater than the second. | :x: |
+| `less` | Checks if the first value is less than the second. | :x: |
+| `define` | Defines a function. | :x: |
+
 
 ### Operators
 | Operator | Description | Status |
 | --- | --- | --- |
 | `->` | Set explicit type. | :warning: |
+| `@` | Get the value of a list at a specific index. | :x: |
 
 ## Documentation
 
 _TODO_
 
+## Notes
+
+- `input`, `output`, `list` and `@` are not implemented in the lexer yet.
+- The interpreter is still in development and some features may not work as expected.
+
 ## Aknowledgements
 
-This project was inspired by the [GFY language](https://github.com/EtanoloYT/gfy) created by [EtanoloYT](https://github.com/EtanoloYT/): :warning: *the original repository is no longer maintained*.
-``
+This project was inspired by the [GFY language](https://github.com/EtanoloYT/gfy) created by [EtanoloYT](https://github.com/EtanoloYT/)
