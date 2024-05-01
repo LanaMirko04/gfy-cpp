@@ -2,13 +2,21 @@
 
 An interpreter for the GFY language written in C++.
 
-- [Building](#building)
-- [Usage](#usage)
-- [Implemented features](#implemented-features)
-  - [Keywords](#keywords)
-  - [Types](#types)
-  - [Operators](#operators)
-- [Aknowledgements](#aknowledgements)
+> :warning: This project is discontinued beacuse the original GFY language is no longer maintained.
+
+- [GFY-CPP](#gfy-cpp)
+  - [Building](#building)
+  - [Usage](#usage)
+  - [Implemented features](#implemented-features)
+    - [I/O](#io)
+    - [Variables](#variables)
+      - [Variable types](#variable-types)
+    - [Arithmetic operations](#arithmetic-operations)
+    - [Logical operations](#logical-operations)
+    - [Operators](#operators)
+  - [Documentation](#documentation)
+  - [Notes](#notes)
+  - [Aknowledgements](#aknowledgements)
 
 ## Building
 
@@ -99,4 +107,6 @@ _TODO_
 
 ## Aknowledgements
 
-This project was inspired by the [GFY language](https://github.com/EtanoloYT/gfy) created by [EtanoloYT](https://github.com/EtanoloYT/)
+Special thanks to:
+- [EtanoloYT](https://github.com/EtanoloYT) for creating the [GFY language](https://github.com/EtanoloYT/gfy);
+- [jothepro](https://github.com/jothepro) for [`doxygen-awesome-css`](https://github.com/jothepro/doxygen-awesome-css).
